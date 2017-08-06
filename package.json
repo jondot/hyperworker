@@ -1,0 +1,26 @@
+{
+  "name": "hyperwork",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:lib": "babel src --out-dir lib",
+    "build:umd:min": "NODE_ENV=production webpack",
+    "build:umd": "NODE_ENV=development webpack",
+    "build": "npm run build:lib",
+    "release": "npm run build && npm publish",
+    "test": "node --harmony-async-await node_modules/.bin/jest",
+    "watch": "node --harmony-async-await node_modules/.bin/jest --watch"
+  },
+  "dependencies": {
+    "email-templates": "^2.6.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "bull": "^3.0.0-rc.4",
+    "goddamn-javascript-config": "^1.0.4",
+    "jest": "^20.0.4",
+    "webpack": "^3.3.0"
+  }
+}
