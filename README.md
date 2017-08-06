@@ -35,7 +35,7 @@ Below is a full default hyperwork config that does the following:
 require('babel-register')
 const runWorkers = !!process.env.HYPERWORK
 
-const { init } = require('../app/workers/support/hyperwork')
+const { init } = require('hyperwork')
 const mailTransport = require('./nodemailer')
 
 const path = require('path')
@@ -78,7 +78,7 @@ module.exports = {
 ## Background Worker
 
 ```javascript
-const { Worker } = require('./support/hyperwork')
+const { Worker } = require('hyperwork')
 
 class CleanupWorker extends Worker {
   async perform({ data }) {
@@ -94,7 +94,7 @@ module.exports = CleanupWorker
 Build a mailer like so:
 
 ```javascript
-const { Mailer } = require('../workers/support/hyperwork')
+const { Mailer } = require('hyperwork')
 class RegistrationMailer extends Mailer {
   static defaults = {
     from: 'acme <acme@acme.org>'
