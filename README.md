@@ -1,10 +1,10 @@
-# Hyperwork
+# Hyperworker
 
 A rapid, ES6 based, background worker and mailer infrastructure for node.js based on [bull](https://github.com/OptimalBits/bull).
 
 ## Quick Start
 
-Add and initialize hyperwork:
+Add and initialize hyperworker:
 
 ```
 $ cd your-project
